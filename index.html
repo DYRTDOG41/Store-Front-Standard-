@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Store Front Standard — 3D Restaurant Concept</title>
-  <meta name="theme-color" content="#181715">
+  <title>Store Front Standard — 3D Restaurant Interior</title>
+  <meta name="theme-color" content="#e6ded1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,33 +18,33 @@
       <span class="mark">M</span>
       <div>
         <small>UNOFFICIAL CONCEPT DEMO</small>
-        <strong>Rancho Del Rio · 3D Storefront</strong>
+        <strong>Rancho Del Rio · 3D Restaurant</strong>
       </div>
     </div>
     <div class="address">8937 Rancho Del Rio Dr · New Port Richey, FL</div>
   </header>
 
   <section class="hero" id="hero">
-    <span class="tag" id="tag">STOREFRONT</span>
-    <h1 id="headline">Don’t open a menu. Enter the restaurant.</h1>
-    <p id="subhead">A proof-of-concept for replacing a flat restaurant webpage with an explorable storefront and in-room ordering kiosk.</p>
+    <span class="tag" id="tag">RESTAURANT INTERIOR</span>
+    <h1 id="headline">You’re already inside.</h1>
+    <p id="subhead">Walk through the restaurant and approach a yellow kiosk screen to begin an order.</p>
     <div class="actions">
-      <button id="enter" class="primary">Enter Restaurant →</button>
-      <button id="order" class="secondary hidden">Open Ordering Kiosk</button>
-      <button id="outside" class="secondary hidden">Go Outside</button>
+      <button id="enter" class="primary hidden">Enter Restaurant →</button>
+      <button id="order" class="primary">Open Ordering Kiosk</button>
+      <button id="outside" class="secondary">View Exterior</button>
     </div>
   </section>
 
-  <div class="pad">
-    <button data-move="up">▲</button>
-    <div><button data-move="left">◀</button><button data-move="reset">↻</button><button data-move="right">▶</button></div>
-    <button data-move="down">▼</button>
+  <div class="pad" aria-label="Movement controls">
+    <button data-move="up" aria-label="Move forward">▲</button>
+    <div><button data-move="left" aria-label="Move left">◀</button><button data-move="reset" aria-label="Reset position">↻</button><button data-move="right" aria-label="Move right">▶</button></div>
+    <button data-move="down" aria-label="Move backward">▼</button>
   </div>
 
   <section id="kiosk" class="kiosk hidden">
     <header>
       <div><small>INTERACTIVE KIOSK · DEMO MENU</small><h2>What sounds good?</h2></div>
-      <button id="close" class="close">×</button>
+      <button id="close" class="close" aria-label="Close kiosk">×</button>
     </header>
     <div class="kiosk-grid">
       <main>
@@ -67,7 +67,7 @@
     </div>
     <div id="done" class="done hidden">
       <div class="check">✓</div>
-      <h3>Storefront-to-order loop complete.</h3>
+      <h3>In-room ordering loop complete.</h3>
       <p>This is where a production build could hand off to an existing restaurant ordering, loyalty and payment system.</p>
       <div id="receipt" class="receipt"></div>
       <button id="restart" class="primary">Start Another Demo Order</button>
