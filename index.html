@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Store Front Standard — 3D Restaurant Concept</title>
+  <meta name="theme-color" content="#181715">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="world"></canvas>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark">M</span>
+      <div>
+        <small>UNOFFICIAL CONCEPT DEMO</small>
+        <strong>Rancho Del Rio · 3D Storefront</strong>
+      </div>
+    </div>
+    <div class="address">8937 Rancho Del Rio Dr · New Port Richey, FL</div>
+  </header>
+
+  <section class="hero" id="hero">
+    <span class="tag" id="tag">STOREFRONT</span>
+    <h1 id="headline">Don’t open a menu. Enter the restaurant.</h1>
+    <p id="subhead">A proof-of-concept for replacing a flat restaurant webpage with an explorable storefront and in-room ordering kiosk.</p>
+    <div class="actions">
+      <button id="enter" class="primary">Enter Restaurant →</button>
+      <button id="order" class="secondary hidden">Open Ordering Kiosk</button>
+      <button id="outside" class="secondary hidden">Go Outside</button>
+    </div>
+  </section>
+
+  <div class="pad">
+    <button data-move="up">▲</button>
+    <div><button data-move="left">◀</button><button data-move="reset">↻</button><button data-move="right">▶</button></div>
+    <button data-move="down">▼</button>
+  </div>
+
+  <section id="kiosk" class="kiosk hidden">
+    <header>
+      <div><small>INTERACTIVE KIOSK · DEMO MENU</small><h2>What sounds good?</h2></div>
+      <button id="close" class="close">×</button>
+    </header>
+    <div class="kiosk-grid">
+      <main>
+        <nav id="cats" class="cats"></nav>
+        <div id="menu" class="menu"></div>
+      </main>
+      <aside>
+        <div class="cart-title"><strong>Your Demo Order</strong><span id="cartCount">0 items</span></div>
+        <div id="cart" class="cart"><p class="empty">Add an item to begin.</p></div>
+        <div class="pickup">
+          <label>Choose pickup</label>
+          <button class="active" data-pickup="Front Counter">Front Counter <span>✓</span></button>
+          <button data-pickup="Drive Thru">Drive Thru <span></span></button>
+          <button data-pickup="Curbside">Curbside <span></span></button>
+        </div>
+        <div class="total"><span>Sample total</span><strong id="total">$0.00</strong></div>
+        <button id="complete" class="primary full" disabled>Complete Concept Order →</button>
+        <p class="fine">Demo only. No payment or real order is submitted. Sample pricing is illustrative.</p>
+      </aside>
+    </div>
+    <div id="done" class="done hidden">
+      <div class="check">✓</div>
+      <h3>Storefront-to-order loop complete.</h3>
+      <p>This is where a production build could hand off to an existing restaurant ordering, loyalty and payment system.</p>
+      <div id="receipt" class="receipt"></div>
+      <button id="restart" class="primary">Start Another Demo Order</button>
+    </div>
+  </section>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
